@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
+#input city names
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -56,6 +57,8 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+# sub program to display raw data
+
     filename = ("{}.csv".format(city.replace(" ","_")))
     print(filename)
     df = pd.read_csv(filename)
